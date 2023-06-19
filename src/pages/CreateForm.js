@@ -1,5 +1,6 @@
 import React from "react";
 import '../index.css';
+import { Button, Container, Typography } from "@mui/material";
 
 // controlled inputs are a way of setting up input fields in forms
 // so that we can track their values
@@ -12,8 +13,8 @@ import '../index.css';
 function CreateForm() {
     // label - for first field
     return (
-        <div>
-            <h2>Add a new workout</h2>
+        <Container>
+            <Typography variant="h4">Add a New Workout</Typography>
             <form>
                 <label className="create">Workout Name: </label>
                 <input 
@@ -36,9 +37,9 @@ function CreateForm() {
                 className="create"
                 />
                 <br />
-                <button>Add Workout</button>
+                <Button variant="contained">Add Workout</Button>
             </form>
-        </div>
+        </Container>
     );
 }
 
