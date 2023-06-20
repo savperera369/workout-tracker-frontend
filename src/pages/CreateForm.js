@@ -22,7 +22,7 @@ function CreateForm() {
     // can listen for the submit event and react to it
 
     const [name, setName] = useState("");
-    const [duration, setDuration] = useState(0);
+    const [duration, setDuration] = useState("");
     const [date, setDate] = useState("");
 
     // first thing to do on submit - stop default action of form being submitted
@@ -43,7 +43,7 @@ function CreateForm() {
             body: JSON.stringify(newWorkout)
         }).then(() => {
             setName("");
-            setDuration(0);
+            setDuration("");
             setDate("");
         })
     };
